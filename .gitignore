@@ -1,0 +1,11 @@
+milvus/db/
+milvus/logs/
+milvus/wal/
+tendis/db/
+tendis/dump/
+tendis/log/
+.DS_Store
+tendis/tendisplus.pid
+tf-serving/models/acgvoc2vec
+tf-serving/models/deepix
+tf-serving/models/illust2vec
