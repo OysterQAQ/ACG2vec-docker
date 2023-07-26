@@ -43,7 +43,7 @@ services:
     image: deepix-webapp:1.0.0
     environment:
       - JAVA_OPTS="-Dfile.encoding=UTF-8"
-    container_name: deepix-webapp
+    container_name: oysterqaq/deepix-webapp
     ports:
       - "8081:8081"
     depends_on:
