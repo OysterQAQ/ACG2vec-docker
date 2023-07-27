@@ -2,17 +2,17 @@ version: '3'
 networks:
   deepix:
 services:
-  tendisplus:
-    image: tencentdbforkv/tendisplus:latest
-    container_name: tendisplus
-    ports:
-      - "51002:51002"
-    environment:
-      - REDIS_PASSWORD=tendisplustest
-      - CLUSTER=no
-      - PORT=51002
-    volumes:
-      - "./tendis:/data1/tendis/51002"
+  # tendisplus:
+  #   image: tencentdbforkv/tendisplus:latest
+  #   container_name: tendisplus
+  #   ports:
+  #     - "51002:51002"
+  #   environment:
+  #     - REDIS_PASSWORD=tendisplustest
+  #     - CLUSTER=no
+  #     - PORT=51002
+  #   volumes:
+  #     - "./tendis:/data1/tendis/51002"
     
 
   tf-serving:
@@ -26,17 +26,17 @@ services:
       - "./tf-serving/models:/models"
    
 
-  milvus:
-    image: milvusdb/milvus:1.1.0-cpu-d050721-5e559c
-    container_name: milvus
-    ports:
-      - "19530:19530"
-      - "19121:19121"
-    volumes:
-      - "./milvus/db:/var/lib/milvus/db"
-      - "./milvus/conf:/var/lib/milvus/conf"
-      - "./milvus/logs:/var/lib/milvus/logs"
-      - "./milvus/wal:/var/lib/milvus/wal"
+  # milvus:
+  #   image: milvusdb/milvus:1.1.0-cpu-d050721-5e559c
+  #   container_name: milvus
+  #   ports:
+  #     - "19530:19530"
+  #     - "19121:19121"
+  #   volumes:
+  #     - "./milvus/db:/var/lib/milvus/db"
+  #     - "./milvus/conf:/var/lib/milvus/conf"
+  #     - "./milvus/logs:/var/lib/milvus/logs"
+  #     - "./milvus/wal:/var/lib/milvus/wal"
 
 
   deepix-webapp:
